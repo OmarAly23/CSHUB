@@ -8,49 +8,82 @@
     <title>CS HUB</title>
     <script>
         function loadAll() {
-            var prog = document.getElementById("programming");
-            var sys = document.getElementById("systems");
-            var th = document.getElementById("theoretical");
+            var prog = document.getElementsByClassName('programming');
+            var sys = document.getElementsByClassName('systems');
+            var th = document.getElementsByClassName('theoretical');
 
-            prog.style.display = "block";
-            sys.style.display = "block";
-            th.style.display = "block";
+            for (var i = 0; i < prog.length; i++) {
+                prog[i].style.display = "block";
+            }
+
+            for (var i = 0; i < sys.length; i++) {
+                sys[i].style.display = "block";
+            }
+
+            for (var i = 0; i < th.length; i++) {
+                th[i].style.display = "block";
+            }
 
 
         }
 
         function loadProg() {
-            var prog = document.getElementById("programming");
-            var sys = document.getElementById("systems");
-            var th = document.getElementById("theoretical");
+            var prog = document.getElementsByClassName('programming');
+            var sys = document.getElementsByClassName('systems');
+            var th = document.getElementsByClassName('theoretical');
 
-            prog.style.display = "block";
-            sys.style.display = "none";
-            th.style.display = "none";
+            for (var i = 0; i < prog.length; i++) {
+                prog[i].style.display = "block";
+            }
+
+            for (var i = 0; i < sys.length; i++) {
+                sys[i].style.display = "none";
+            }
+
+            for (var i = 0; i < th.length; i++) {
+                th[i].style.display = "none";
+            }
+
 
 
         }
 
         function loadSys() {
-            var prog = document.getElementById("programming");
-            var sys = document.getElementById("systems");
-            var th = document.getElementById("theoretical");
+            var prog = document.getElementsByClassName('programming');
+            var sys = document.getElementsByClassName('systems');
+            var th = document.getElementsByClassName('theoretical');
 
-            prog.style.display = "none";
-            sys.style.display = "block";
-            th.style.display = "none";
+            for (var i = 0; i < prog.length; i++) {
+                prog[i].style.display = "none";
+            }
 
+            for (var i = 0; i < sys.length; i++) {
+                sys[i].style.display = "block";
+            }
+
+            for (var i = 0; i < th.length; i++) {
+                th[i].style.display = "none";
+            }
 
         }
 
         function loadTH() {
-            var prog = document.getElementById("programming");
-            var sys = document.getElementById("systems");
-            var th = document.getElementById("theoretical");
+            var prog = document.getElementsByClassName('programming');
+            var sys = document.getElementsByClassName('systems');
+            var th = document.getElementsByClassName('theoretical');
 
-            prog.style.display = "none";
-            sys.style.display = "none";
-            th.style.display = "block";
+            for (var i = 0; i < prog.length; i++) {
+                prog[i].style.display = "none";
+            }
+
+            for (var i = 0; i < sys.length; i++) {
+                sys[i].style.display = "none";
+            }
+
+            for (var i = 0; i < th.length; i++) {
+                th[i].style.display = "block";
+            }
+
 
 
         }
@@ -164,10 +197,10 @@
                 </style>
                 
                 <div class="w-11/12">
-                    <a href="./ToC.html" id="theoretical">
+                    <a href="./ToC.html" class="theoretical">
                         <div class="my-4 p-3 border border-gray-300 rounded-lg
                         bg-white flex px-10 gap-x-6 justify-between
-                        hover:bg-neutral-200">
+                        hover:bg-neutral-200">                            
                             <span>
                                 <p class="font-medium mb-3">CS211: Theory of Computation I</p>
                                 Computer Science department<br>
@@ -175,101 +208,115 @@
                             </span>
                             <div>
                                 <p>Number of Resources</p>
-                                <p class="ml-6"><span class="text-2xl">7</span></p>
+                                <p class="ml-6"><span class="text-2xl">3</span></p>
+                            </div>
+                        </div>    
+                    </a>
+                        <a href="#" class="theoretical">
+                            <div class="my-4 p-3 border border-gray-300 rounded-lg
+                            bg-white flex px-10 gap-x-6 justify-between
+                            hover:bg-neutral-200">                            
+                                <span>
+                                    <p class="font-medium mb-3">CS315: Theory of Computation II</p>
+                                    Computer Science department<br>
+                                    Kuwait University
+                                </span>
+                                <div>
+                                    <p>Number of Resources</p>
+                                    <p class="ml-6"><span class="text-2xl">3</span></p>
+                                </div>
                             </div>    
-                        </div>
-                    </a>
-                    <a href="#" id="theoretical">
-                        <div class="my-4 p-3 border border-gray-300 rounded-lg
-                        bg-white flex px-10 gap-x-6 justify-between
-                        hover:bg-neutral-200">
-                            <span>
-                                <p class="font-medium mb-3">CS315: Theory of Computation II</p>
-                                Computer Science department<br>
-                                Kuwait University
-                            </span>
-                            <div>
-                                <p>Number of Resources</p>
-                                <p class="ml-6"><span class="text-2xl">3</span></p>
+                        </a>
+                        <a href="./ToC.html" class="programming">
+                            <div class="my-4 p-3 border border-gray-300 rounded-lg
+                            bg-white flex px-10 gap-x-6 justify-between
+                            hover:bg-neutral-200">
+                                <span>
+                                    <p class="font-medium mb-3">CS335: Web Programming</p>
+                                    Computer Science department<br>
+                                    Kuwait University
+                                </span>
+                                <div>
+                                    <p>Number of Resources</p>
+                                    <p class="ml-6"><span class="text-2xl">7</span></p>
+                                </div>    
                             </div>
-                        </div>    
-                    </a>
-                    <a href="./ToC.html" id="programming">
-                        <div class="my-4 p-3 border border-gray-300 rounded-lg
-                        bg-white flex px-10 gap-x-6 justify-between
-                        hover:bg-neutral-200">
-                            <span>
-                                <p class="font-medium mb-3">CS335: Web Programming</p>
-                                Computer Science department<br>
-                                Kuwait University
-                            </span>
-                            <div>
-                                <p>Number of Resources</p>
-                                <p class="ml-6"><span class="text-2xl">7</span></p>
+                        </a>
+                        <a href="#" class="systems">
+                            <div class="my-4 p-3 border border-gray-300 rounded-lg
+                            bg-white flex px-10 gap-x-6 justify-between
+                            hover:bg-neutral-200">
+                                <span>
+                                    <p class="font-medium mb-3">CS321: Operating Systems</p>
+                                    Computer Science department<br>
+                                    Kuwait University
+                                </span>
+                                <div>
+                                    <p>Number of Resources</p>
+                                    <p class="ml-6"><span class="text-2xl">3</span></p>
+                                </div>
                             </div>    
-                        </div>
-                    </a>
-                    <a href="#" id="systems">
-                        <div class="my-4 p-3 border border-gray-300 rounded-lg
-                        bg-white flex px-10 gap-x-6 justify-between
-                        hover:bg-neutral-200">
-                            <span>
-                                <p class="font-medium mb-3">CS321: Operating Systems</p>
-                                Computer Science department<br>
-                                Kuwait University
-                            </span>
-                            <div>
-                                <p>Number of Resources</p>
-                                <p class="ml-6"><span class="text-2xl">3</span></p>
-                            </div>
-                        </div>    
-                    </a>
-                    <a href="#" id="systems">
-                        <div class="my-4 p-3 border border-gray-300 rounded-lg
-                        bg-white flex px-10 gap-x-6 justify-between
-                        hover:bg-neutral-200">
-                            <span>
-                                <p class="font-medium mb-3">CS470: Database Systems</p>
-                                Computer Science department<br>
-                                Kuwait University
-                            </span>
-                            <div>
-                                <p>Number of Resources</p>
-                                <p class="ml-6"><span class="text-2xl">2</span></p>
-                            </div>
-                        </div>    
-                    </a>                    
-                    <a href="#" id="programming">
-                        <div class="my-4 p-3 border border-gray-300 rounded-lg
-                        bg-white flex px-10 gap-x-6 justify-between
-                        hover:bg-neutral-200">
-                            <span>
-                                <p class="font-medium mb-3">CS220: Programming in C and UNIX</p>
-                                Computer Science department<br>
-                                Kuwait University
-                            </span>
-                            <div>
-                                <p>Number of Resources</p>
-                                <p class="ml-6"><span class="text-2xl">3</span></p>
-                            </div>
-                        </div>    
-                    </a>                    
-                    <a href="#" id="theoretical">
-                        <div class="my-4 p-3 border border-gray-300 rounded-lg
-                        bg-white flex px-10 gap-x-6 justify-between
-                        hover:bg-neutral-200">
-                            <span>
-                                <p class="font-medium mb-3">CS415: Information Theory and Cryptography</p>
-                                Computer Science department<br>
-                                Kuwait University
-                            </span>
-                            <div>
-                                <p>Number of Resources</p>
-                                <p class="ml-6"><span class="text-2xl">2</span></p>
-                            </div>
-                        </div>    
-                    </a>
-                </div>        
+                        </a>
+                        <a href="#" class="programming">
+                            <div class="my-4 p-3 border border-gray-300 rounded-lg
+                            bg-white flex px-10 gap-x-6 justify-between
+                            hover:bg-neutral-200">
+                                <span>
+                                    <p class="font-medium mb-3">CS142: Computer Programming II</p>
+                                    Computer Science department<br>
+                                    Kuwait University
+                                </span>
+                                <div>
+                                    <p>Number of Resources</p>
+                                    <p class="ml-6"><span class="text-2xl">2</span></p>
+                                </div>
+                            </div>    
+                        </a>
+                        <a href="#" class="systems">
+                            <div class="my-4 p-3 border border-gray-300 rounded-lg
+                            bg-white flex px-10 gap-x-6 justify-between
+                            hover:bg-neutral-200">
+                                <span>
+                                    <p class="font-medium mb-3">CS470: Database Systems</p>
+                                    Computer Science department<br>
+                                    Kuwait University
+                                </span>
+                                <div>
+                                    <p>Number of Resources</p>
+                                    <p class="ml-6"><span class="text-2xl">2</span></p>
+                                </div>
+                            </div>    
+                        </a>                    
+                        <a href="#" class="programming">
+                            <div class="my-4 p-3 border border-gray-300 rounded-lg
+                            bg-white flex px-10 gap-x-6 justify-between
+                            hover:bg-neutral-200">
+                                <span>
+                                    <p class="font-medium mb-3">CS220: Programming in C and UNIX</p>
+                                    Computer Science department<br>
+                                    Kuwait University
+                                </span>
+                                <div>
+                                    <p>Number of Resources</p>
+                                    <p class="ml-6"><span class="text-2xl">3</span></p>
+                                </div>
+                            </div>    
+                        </a>                    
+                        <a href="#" class="theoretical">
+                            <div class="my-4 p-3 border border-gray-300 rounded-lg
+                            bg-white flex px-10 gap-x-6 justify-between
+                            hover:bg-neutral-200">
+                                <span>
+                                    <p class="font-medium mb-3">CS415: Information Theory and Cryptography</p>
+                                    Computer Science department<br>
+                                    Kuwait University
+                                </span>
+                                <div>
+                                    <p>Number of Resources</p>
+                                    <p class="ml-6"><span class="text-2xl">2</span></p>
+                                </div>
+                            </div>    
+                        </a>
             </div>
         </div>
     </section>
