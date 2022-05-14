@@ -6,6 +6,55 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style/main.css">
     <title>CS HUB</title>
+    <script>
+        function loadAll() {
+            var prog = document.getElementById("programming");
+            var sys = document.getElementById("systems");
+            var th = document.getElementById("theoretical");
+
+            prog.style.display = "block";
+            sys.style.display = "block";
+            th.style.display = "block";
+
+
+        }
+
+        function loadProg() {
+            var prog = document.getElementById("programming");
+            var sys = document.getElementById("systems");
+            var th = document.getElementById("theoretical");
+
+            prog.style.display = "block";
+            sys.style.display = "none";
+            th.style.display = "none";
+
+
+        }
+
+        function loadSys() {
+            var prog = document.getElementById("programming");
+            var sys = document.getElementById("systems");
+            var th = document.getElementById("theoretical");
+
+            prog.style.display = "none";
+            sys.style.display = "block";
+            th.style.display = "none";
+
+
+        }
+
+        function loadTH() {
+            var prog = document.getElementById("programming");
+            var sys = document.getElementById("systems");
+            var th = document.getElementById("theoretical");
+
+            prog.style.display = "none";
+            sys.style.display = "none";
+            th.style.display = "block";
+
+
+        }
+    </script>
 </head>
 <body class="">
     <header class="border-b p-3">
@@ -42,7 +91,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                    Back
+                    <a href="./index.html">Back</a>
                 </span>
                 <div class="flex items-center">
                     <span class="px-5 font-semibold text-base">
@@ -64,16 +113,58 @@
                 <p class="mt-4 mb-4">
                     <span class="font-medium">3</span> total search results for <span class="font-medium">Theory</span>
                 </p>
-            
-                <div class="flex">
-                    FILTER
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
+
+                <div class="group inline-block">
+                    <button class="outline-none focus:outline-none py-1 font-semibold text-base
+                    flex items-center min-w-32">
+                        <span class="pr-1 font-semibold">FILTER</span>
+                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </button>
+                
+                    <ul class="divide-y divide-gray-200 shadow mt-1
+                    transform scale-0 group-hover:scale-100 absolute 
+                    transition duration-150 ease-in-out origin-top min-w-32">
+                
+                        <li class="rounded-sm bg-neutral-300 hover:bg-neutral-400 py-2">
+                            <button class="text-left w-full px-4" onclick="loadAll()">
+                                All results
+                            </button>
+                        </li>
+                
+                        <li class="rounded-sm bg-neutral-300 hover:bg-neutral-400 py-2">
+                            <button class="text-left w-full px-4" onclick="loadProg()">
+                                Programming
+                            </button>
+                        </li>
+                
+                        <li class="rounded-sm bg-neutral-300 hover:bg-neutral-400 py-2">
+                            <button class="text-left w-full px-4" onclick="loadSys()">
+                                Systems
+                            </button>
+                        </li>
+                
+                        <li class="rounded-sm bg-neutral-300 hover:bg-neutral-400 py-2">
+                            <button class="text-left w-full px-4" onclick="loadTH()">
+                                Theoretical
+                            </button>
+                        </li>
+                    </ul>
                 </div>
                 
+                <style>
+                    li>ul                 { transform: translatex(100%) scale(0) }
+                    li:hover>ul           { transform: translatex(101%) scale(1) }
+                    li > button svg       { transform: rotate(-90deg) }
+                    li:hover > button svg { transform: rotate(-270deg) }
+                
+                    .group:hover .group-hover\:scale-100 { transform: scale(1) }
+                    .group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
+                    .scale-0 { transform: scale(0) }
+                    .min-w-32 { min-width: 8rem }
+                </style>
+                
                 <div class="w-11/12">
-                    <a href="./ToC.html">
+                    <a href="./ToC.html" id="theoretical">
                         <div class="my-4 p-3 border border-gray-300 rounded-lg
                         bg-white flex px-10 gap-x-6 justify-between
                         hover:bg-neutral-200">
@@ -88,7 +179,7 @@
                             </div>    
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="#" id="theoretical">
                         <div class="my-4 p-3 border border-gray-300 rounded-lg
                         bg-white flex px-10 gap-x-6 justify-between
                         hover:bg-neutral-200">
@@ -103,7 +194,67 @@
                             </div>
                         </div>    
                     </a>
-                    <a href="#">
+                    <a href="./ToC.html" id="programming">
+                        <div class="my-4 p-3 border border-gray-300 rounded-lg
+                        bg-white flex px-10 gap-x-6 justify-between
+                        hover:bg-neutral-200">
+                            <span>
+                                <p class="font-medium mb-3">CS335: Web Programming</p>
+                                Computer Science department<br>
+                                Kuwait University
+                            </span>
+                            <div>
+                                <p>Number of Resources</p>
+                                <p class="ml-6"><span class="text-2xl">7</span></p>
+                            </div>    
+                        </div>
+                    </a>
+                    <a href="#" id="systems">
+                        <div class="my-4 p-3 border border-gray-300 rounded-lg
+                        bg-white flex px-10 gap-x-6 justify-between
+                        hover:bg-neutral-200">
+                            <span>
+                                <p class="font-medium mb-3">CS321: Operating Systems</p>
+                                Computer Science department<br>
+                                Kuwait University
+                            </span>
+                            <div>
+                                <p>Number of Resources</p>
+                                <p class="ml-6"><span class="text-2xl">3</span></p>
+                            </div>
+                        </div>    
+                    </a>
+                    <a href="#" id="systems">
+                        <div class="my-4 p-3 border border-gray-300 rounded-lg
+                        bg-white flex px-10 gap-x-6 justify-between
+                        hover:bg-neutral-200">
+                            <span>
+                                <p class="font-medium mb-3">CS470: Database Systems</p>
+                                Computer Science department<br>
+                                Kuwait University
+                            </span>
+                            <div>
+                                <p>Number of Resources</p>
+                                <p class="ml-6"><span class="text-2xl">2</span></p>
+                            </div>
+                        </div>    
+                    </a>                    
+                    <a href="#" id="programming">
+                        <div class="my-4 p-3 border border-gray-300 rounded-lg
+                        bg-white flex px-10 gap-x-6 justify-between
+                        hover:bg-neutral-200">
+                            <span>
+                                <p class="font-medium mb-3">CS220: Programming in C and UNIX</p>
+                                Computer Science department<br>
+                                Kuwait University
+                            </span>
+                            <div>
+                                <p>Number of Resources</p>
+                                <p class="ml-6"><span class="text-2xl">3</span></p>
+                            </div>
+                        </div>    
+                    </a>                    
+                    <a href="#" id="theoretical">
                         <div class="my-4 p-3 border border-gray-300 rounded-lg
                         bg-white flex px-10 gap-x-6 justify-between
                         hover:bg-neutral-200">
