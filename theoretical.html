@@ -65,13 +65,44 @@
                     <span class="font-medium">3</span> total search results for <span class="font-medium">Theory</span>
                 </p>
             
-                <div class="flex">
-                    FILTER
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </div>
+                <div class="group inline-block">
+                    <button class="outline-none focus:outline-none py-1 font-semibold text-base
+                    flex items-center min-w-32">
+                        <span class="pr-1 font-semibold">Sort By</span>
+                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </button>
                 
+                    <ul class="divide-y divide-gray-200 shadow mt-1
+                    transform scale-0 group-hover:scale-100 absolute 
+                    transition duration-150 ease-in-out origin-top min-w-32">
+                
+                        <li class="rounded-sm bg-neutral-300 hover:bg-neutral-400 py-2">
+                            <button class="text-left w-full px-4">
+                                Topological
+                            </button>
+                        </li>
+                
+                        <li class="rounded-sm bg-neutral-300 hover:bg-neutral-400 py-2">
+                            <button class="text-left w-full px-4">
+                                Name
+                            </button>
+                        </li>
+                
+                        <li class="rounded-sm bg-neutral-300 hover:bg-neutral-400 py-2">
+                            <button class="text-left w-full px-4">
+                                Alphabetically
+                            </button>
+                        </li>
+                
+                        <li class="rounded-sm bg-neutral-300 hover:bg-neutral-400 py-2">
+                            <button class="text-left w-full px-4">
+                                Number of Resources
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+
                 <div class="w-11/12">
                     <a href="./ToC.html">
                         <div class="my-4 p-3 border border-gray-300 rounded-lg

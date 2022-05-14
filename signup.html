@@ -6,6 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style/main.css">
     <title>CS HUB - Sign UP</title>
+    <script src="validate.js"></script>
 </head>
 <body class="min-w-fit">
     <header class="border-b p-3">
@@ -42,7 +43,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                   </svg>
-                Back
+                  <a href="./index.html">Back</a>
                 </span>
         </div> 
     </section>
@@ -73,7 +74,7 @@
         </div>
 
         <div class="mt-10">
-          <form action="#">
+          <form action="#" name="signupForm">
             <div class="flex flex-col mb-5">
               <label
                 for="email"
@@ -98,9 +99,9 @@
                 </div>
 
                 <input
-                  id="email"
-                  type="email"
-                  name="email"
+                  id="name"
+                  type="name"
+                  name="name"
                   class="
                     text-sm
                     placeholder-gray-500
@@ -205,9 +206,8 @@
 
             <div class="flex w-full">
               <button
-                type="submit"
-                class="
-                  flex
+                class=
+                " flex
                   mt-2
                   items-center
                   justify-center
@@ -222,9 +222,9 @@
                   w-full
                   transition
                   duration-150
-                  ease-in
-                "
-              >
+                  ease-in" 
+                  onclick="validate(document.signupForm.password)">
+
                 <span class="mr-2 uppercase">Sign Up</span>
                 <span>
                   <svg
@@ -268,6 +268,12 @@
           >
         </a>
       </div>
+      <br>
+      <a href="#" class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Password format: </h5>        
+        <p class="font-normal text-gray-700 dark:text-gray-400">Minimum eight, at least one uppercase letter, one lowercase letter, one number and one special character</p>
+    </a>
+    
     </div>
 
 </body>
